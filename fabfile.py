@@ -196,6 +196,7 @@ def setup_apache():
     sudo("ln -sfn /var/www/%s/conf/vhost.conf /etc/apache2/sites-available/%s" 
             % (TEMPLATE_DICT['SITE_NAME'], TEMPLATE_DICT['SITE_NAME']))
     sudo("a2ensite %s" % TEMPLATE_DICT['SITE_NAME'])
+    sudo("a2dissite 000-default")
 
 def start():
     sudo('/etc/init.d/activemq start')
