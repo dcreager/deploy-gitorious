@@ -199,6 +199,9 @@ def setup_apache():
     sudo("a2ensite %s" % TEMPLATE_DICT['SITE_NAME'])
     sudo("a2dissite 000-default")
 
+def setup_ultrasphinx():
+    sudo('su - git -c "cd /var/www/%s/gitorious && env RAILS_ENV=production rake ultrasphinx:bootstrap"' % TEMPLATE_DICT['SITE_NAME'])
+
 def start():
     sudo('/etc/init.d/activemq start')
     sudo('/etc/init.d/git-daemon start')
@@ -221,4 +224,5 @@ def deploy():
     migrate_database()
     permissions()
     setup_apache()
+    setup_ultrasphinx()
     start()
