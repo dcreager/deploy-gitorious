@@ -43,7 +43,7 @@ def download_packages():
 
 def change_umask():
     # Set it for the current process
-    sudo("umask 0002")
+    run("umask 0002")
     # And for future processes
     files.sed("/etc/profile", "umask 022", "umask 0002", use_sudo=True)
 
