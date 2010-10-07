@@ -47,7 +47,7 @@ development:
   only_site_admins_can_create_projects: true
 
   # Should we hide HTTP clone urls?
-  hide_http_clone_urls: false
+  hide_http_clone_urls: true
 
   # Is this gitorious.org? Read: should we have a very flashy homepage?
   is_gitorious_dot_org: false
@@ -68,7 +68,7 @@ production:
   archive_cache_dir: "/var/git/tarballs"
   archive_work_dir: "/var/git/tarballs-work"
   only_site_admins_can_create_projects: true
-  hide_http_clone_urls: false
+  hide_http_clone_urls: true
   is_gitorious_dot_org: false
 
 test:
@@ -88,5 +88,5 @@ test:
   archive_cache_dir: "/var/git/tarballs"
   archive_work_dir: "/var/git/tarballs-work"
   only_site_admins_can_create_projects: false
-  hide_http_clone_urls: false
+  hide_http_clone_urls: true
   is_gitorious_dot_org: false
