@@ -3,4 +3,4 @@ gitorious.yml
 *.swp
 env
 configs/database.yml
-configs/git.example.com.conf
+configs/*.conf
