@@ -2,6 +2,7 @@ gitorious.yml
 *.pyc
 *.swp
 env
+credentials.py
 configs/database.yml
 configs/git-poller
 configs/*.conf

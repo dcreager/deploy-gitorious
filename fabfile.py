@@ -14,11 +14,7 @@
 
 from fabric.api import *
 
-TEMPLATE_DICT = {
-    'SITE_NAME' : 'git.example.com',
-    'SITE_EMAIL' : 'admin@exampe.com',
-    'DB_PASSWORD' : 'admin'
-}
+from credentials import TEMPLATE_DICT
 
 # core packages
 PACKAGES = """ 
